@@ -18,7 +18,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Production Build
 
-Please refer [backbase demo](http://www.backbase.sajidgangat.com) at www.backbase.sajidgangat.com to check the working demo of the project.
+Please refer [backbase demo](http://backbase.sajidgangat.com/) at http://backbase.sajidgangat.com/ to check the working demo of the project.
 
 
 ## Features
