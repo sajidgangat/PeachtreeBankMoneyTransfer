@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="header clearfix head">
+    <img src="../assets/logo.jpg" />
+  </div>
+
+  <div class="row" style="padding: 7%;">
+    <div class="col-md-4">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center">Make a Transfer</h3>
+        </div>
+        <div class="panel-body">
+          <app-transfer-form (onTransactionAdd)="handleOnTransactionAdd($event)"></app-transfer-form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <!-- <img src="../../assets/icons/briefcase.png" /> -->
+
+          <h3 class="panel-title text-center">Recent Transactions</h3>
+        </div>
+        <div class="panel-body">
+          <app-recent-transaction [transactions]="stringifiedData"></app-recent-transaction>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

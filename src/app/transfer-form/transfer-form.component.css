@@ -1,0 +1,15 @@
+button{
+    color:white;
+    background-color: #ee7033;
+    border: none;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+  

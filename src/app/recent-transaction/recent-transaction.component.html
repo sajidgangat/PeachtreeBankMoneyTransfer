@@ -1,0 +1,58 @@
+<input
+  type="search"
+  [(ngModel)]="search"
+  class="aligntext"
+  (ngModelChange)="onSearch()"
+/>
+
+Sort By:
+<span class="spaceincontainer">
+  <button
+    type="button"
+    (click)="onSortByDate()"
+    class="btn1 btn-outline-secondary"
+    placeholder="search"
+  >
+    DATE
+  </button>
+</span>
+<span class="spaceincontainer">
+  <button
+    type="button"
+    (click)="onSortByAccount()"
+    class="btn1 btn-outline-secondary"
+  >
+    BENEFICIARY
+  </button>
+</span>
+<span class="spaceincontainer">
+  <button
+    type="button"
+    (click)="onSortByAmount()"
+    class="btn1 btn-outline-secondary"
+  >
+    AMOUNT
+  </button>
+</span>
+
+<div class="table-responsive" style="margin-top: 2%;">
+  <table class="table table-hover">
+    <tbody>
+      <tr *ngFor="let transaction of filteredData">
+        <td>{{ transaction.transactionDate | date: "LLL yy" }}</td>
+        <td>
+          <img height="40" width="40" [src]="transaction.merchantLogo" />
+        </td>
+        <td>
+          <div style="font-weight: bold;">
+            {{ transaction.merchant }}
+          </div>
+          <div>
+            {{ transaction.transactionType }}
+          </div>
+        </td>
+        <td style="font-weight: bold;">-{{ transaction.amount | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

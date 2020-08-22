@@ -1,0 +1,41 @@
+<!-- <div>
+    <img src="../../assets/icons/arrows.png" /> Make a Transfer
+</div>
+<div>
+    <label for="fromAccount">From Account</label>
+    <input id="fromAccount" [(ngModel)]="transfer.fromAccount" [disabled]="true">
+</div>
+<div>
+    <label for="toAccount">To Account</label>
+    <input id="toAccount" [(ngModel)]="transfer.merchant">
+</div>
+<div >
+    <label for="amount">Amount</label>
+    <input id="fromAccount" [(ngModel)]="transfer.amount">
+</div>
+<button type="button" class="btn btn-warning" (click)="onSubmitClick()">Submit</button> -->
+
+<form>
+  <div *ngIf="showError" class="alert alert-danger" role="alert">
+    {{this.showError}}
+  </div>
+  <div class="form-group">
+    <label for="fromAccount">From Account</label>
+    <input type="text" name="fromAccount" class="form-control" id="fromAccount" [(ngModel)]="transfer.fromAccount"
+      [disabled]="true">
+  </div>
+  <div class="form-group">
+    <label for="toAccount">To Account</label>
+    <input type="text" name="toAccount" class="form-control" placeholder="eg. Georgia Power Plant" id="toAccount"
+      [(ngModel)]="transfer.merchant">
+  </div>
+
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input ngxCurrencyInput type="text" name="amoun" class="form-control" placeholder="$ 0.00" id="fromAccount"
+      [(ngModel)]="transfer.amount">
+  </div>
+
+  <button [disabled]="!transfer.merchant || !transfer.amount" type="submit" class="btn btn-primary"
+    style="float: right;" (click)="onSubmitClick()">Submit</button>
+</form>
