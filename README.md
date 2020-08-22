@@ -39,7 +39,7 @@ Please refer [backbase demo](http://www.backbase.sajidgangat.com) at www.backbas
 
 ## Application structure
 
-Please Refere [This link](http://www.backbase.sajidgangat.com/structure)
+Please Refere [This link](http://www.backbase.sajidgangat.com/structure/back.svg)
 
 
 ## License
